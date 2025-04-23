@@ -1,0 +1,157 @@
+.single {
+  display: flex;
+  width: 100%;
+
+  .singleContainer {
+    flex: 6;
+
+    .top {
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+
+      .left {
+        flex: 1;
+        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        position: relative;
+        background-color: #f9f9f9;
+        color: #555;
+        animation: fadeIn 0.6s ease-in;
+
+        .editButton {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 6px 12px;
+          font-size: 13px;
+          color: white;
+          background-color: #0fa3b1;
+          cursor: pointer;
+          border-radius: 0px 0px 0px 8px;
+          transition: background-color 0.3s ease;
+        }
+
+        .editButton:hover {
+          background-color: #0c7f91;
+        }
+
+        .title {
+          color: #666;
+        }
+
+        .item {
+          display: flex;
+          gap: 20px;
+
+          .itemImg {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+          }
+
+          .details {
+            .itemTitle {
+              margin-bottom: 10px;
+              color: #444;
+              font-size: 22px;
+              font-weight: bold;
+            }
+
+            .detailItem {
+              margin-bottom: 10px;
+              font-size: 15px;
+
+              .itemKey {
+                font-weight: bold;
+                color: gray;
+                margin-right: 5px;
+              }
+
+              .itemValue {
+                font-weight: 400;
+                color: #222;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        flex: 2;
+      }
+    }
+
+    .bottom {
+      box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 10px 20px;
+      background-color: #f9f9f9;
+      color: #444;
+
+      .title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.dark {
+    .singleContainer {
+      background-color: #111;
+
+      .top {
+        .left {
+          background-color: #222;
+          color: #eee;
+          box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.9);
+
+          .title {
+            color: #eee;
+          }
+
+          .item {
+            .details {
+              .itemTitle {
+                color: #eee;
+              }
+
+              .detailItem {
+                .itemKey {
+                  color: #999;
+                }
+
+                .itemValue {
+                  color: #eee;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .bottom {
+        background-color: #222;
+        color: #eee;
+        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.9);
+
+        .title {
+          color: #eee;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

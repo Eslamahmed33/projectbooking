@@ -1,0 +1,165 @@
+.taxi-container {
+    padding: 2rem;
+    background: linear-gradient(to right, #6441a5, #2a0845);
+    font-family: 'Cairo', sans-serif;
+    color: white;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .search-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  .search-input {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .search-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .item-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .item-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .item-details {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .item-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .item-details p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+  }
+  
+  .view-details-button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+  
+  .view-details-button:hover {
+    background-color: #218838;
+  }
+  
+  .no-results {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-top: 2rem;
+  }
+
+  /* ... باقي تنسيقاتك السابقة ... */
+
+/* ✨ تنسيقات قسم "لماذا تختار خدمتنا؟" ✨ */
+.why-choose-us {
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+  }
+  
+  .why-choose-us h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .feature-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00bfff; /* لون مميز للأيقونات */
+  }
+  
+  .feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.6;
+  }

@@ -1,0 +1,100 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.plist {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.plist-slide {
+  display: flex;
+  flex: 0 0 100%;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.plistitem {
+  flex: 0 0 24%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f8f8f8;
+  transition: transform 0.3s ease;
+}
+
+.plistitem:hover {
+  transform: scale(1.03);
+}
+
+.plistimg {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.plisttitle {
+  text-align: center;
+  padding: 10px;
+}
+
+.plisttitle h1 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.plisttitle h2 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-btn.left {
+  left: 5px;
+}
+
+.slider-btn.right {
+  right: 5px;
+}
+
+@media (max-width: 768px) {
+  .plist-slide {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .plistitem {
+    flex: 0 0 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .plistitem {
+    flex: 0 0 100%;
+  }
+
+  .slider-btn {
+    display: none;
+  }
+}

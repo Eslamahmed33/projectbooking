@@ -1,0 +1,187 @@
+/* Navbar */
+.navbar {
+  height: 70px; /* تقليل الارتفاع الافتراضي قليلاً */
+  background: linear-gradient(135deg, #3f51b5, #5c6bc0); /* تدرج عصري أزرق بنفسجي */
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1440px; /* دعم للشاشات الأكبر */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px; /* زيادة الحشو الافتراضي قليلاً */
+  box-sizing: border-box;
+}
+
+.logocontain {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 26px; /* تقليل الحجم الافتراضي قليلاً */
+  letter-spacing: 1.6px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.logo span {
+  color: #ffca28;
+}
+
+.imglogo img {
+  width: 50px; /* تقليل الحجم الافتراضي قليلاً */
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #fff;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navButton {
+  margin-left: 10px;
+  border: none;
+  padding: 9px 16px;
+  cursor: pointer;
+  background-color: #00c6ff;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px; /* تقليل الحجم الافتراضي قليلاً */
+  /* إزالة خاصية الانتقال */
+  /* transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; */
+  box-shadow: 0 2px 5px rgba(0, 198, 255, 0.3);
+}
+
+.navButton:hover {
+  background-color: #0072ff;
+  /* إزالة خاصية التحويل عند التhover */
+  /* transform: translateY(-2px); */
+  /* إزالة تغيير الظل عند الhover */
+  /* box-shadow: 0 4px 8px rgba(0, 114, 255, 0.5); */
+}
+
+/* ✅ Small Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .navContainer {
+    padding: 0 10px;
+    gap: 5px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .imglogo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navItems {
+    gap: 6px;
+  }
+
+  .navButton {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
+/* ✅ Medium Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+  .navContainer {
+    padding: 0 16px;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .imglogo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navItems {
+    gap: 8px;
+  }
+
+  .navButton {
+    padding: 7px 11px;
+    font-size: 13px;
+    margin-left: 6px;
+  }
+}
+
+/* ✅ Tablets (up to 1024px) */
+@media (max-width: 1024px) {
+  .navContainer {
+    padding: 0 20px;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .imglogo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .navItems {
+    gap: 10px;
+  }
+
+  .navButton {
+    padding: 8px 14px;
+    font-size: 13.5px;
+    margin-left: 8px;
+  }
+}
+
+/* ✅ Large Screens (more than 1440px) - Adjust as needed */
+@media (min-width: 1441px) {
+  .navContainer {
+    padding: 0 40px;
+    gap: 20px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  .imglogo img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .navItems {
+    gap: 20px;
+  }
+
+  .navButton {
+    padding: 12px 20px;
+    font-size: 16px;
+    margin-left: 15px;
+  }
+}

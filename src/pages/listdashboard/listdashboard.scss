@@ -1,0 +1,43 @@
+.list {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  .listContainer {
+    width: 80%;
+    flex: 6;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    margin: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex; /* تأكد إننا بنستخدم فليكس بوكس */
+    flex-direction: column; /* رتب العناصر بشكل عمودي */
+  }
+
+ 
+  // 💡 دارك مود أنيق
+  &.dark {
+    background-color: #0f172a;
+
+    .listContainer {
+      background-color: #1e293b;
+      color: #f1f5f9;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+    }
+  }
+
+ 
+  // ✅ موبايل فريندلي
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .listContainer {
+      margin: 10px;
+      padding: 15px;
+      border-radius: 12px;
+    }
+  }
+}

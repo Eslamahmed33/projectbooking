@@ -1,0 +1,89 @@
+.featured {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    max-width: 1024px;
+  }
+  
+  .featureitem {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    min-width: 250px;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  }
+  
+  .featureitem:hover {
+    transform: scale(1.02);
+  }
+  
+  .featuredimg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .featureitem:hover .featuredimg {
+    transform: scale(1.05);
+  }
+  
+  .featuredtitle {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    color: white;
+  }
+  
+  .featuredtitle h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .featuredtitle h2 {
+    margin: 4px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  /* Responsive */
+  @media (min-width: 600px) {
+    .featureitem {
+      width: calc(50% - 10px);
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .featureitem {
+      width: calc(33.33% - 10px);
+    }
+  }
+  
+  /* Add some styles for small screens */
+  @media (max-width: 480px) {
+    .featured {
+      gap: 10px;
+      padding: 0 5px;
+    }
+  
+    .featureitem {
+      width: 100%;
+    }
+  }
+  

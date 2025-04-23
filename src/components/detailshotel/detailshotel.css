@@ -1,0 +1,383 @@
+.detailshotelContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px; /* زيادة الهامش العلوي */
+  padding: 0 20px; /* زيادة الحشو الجانبي */
+  background-color: #f9f9f9; /* لون خلفية فاتح */
+  min-height: calc(100vh - 130px); /* احتساب ارتفاع الشريط العلوي والسفلي */
+}
+
+.detailshotelWrapper {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* زيادة المسافة بين العناصر */
+  position: relative;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); /* ظل أكثر بروزًا */
+  padding: 30px; /* زيادة الحشو الداخلي */
+  overflow: hidden; /* لمنع تجاوز الظل للعناصر الداخلية */
+}
+
+.dsBookNow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: none;
+  padding: 14px 28px; /* زيادة حجم الزر */
+  background-color: #5cb85c; /* لون أخضر جذاب */
+  color: white;
+  font-weight: 600; /* خط أكثر سمكًا */
+  border-radius: 10px; /* حواف أكثر استدارة */
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(92, 184, 92, 0.4); /* ظل أخضر */
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.dsBookNow:hover {
+  background-color: #4cae4c; /* لون أغمق عند التhover */
+  transform: translateY(-2px); /* حركة بسيطة عند التhover */
+}
+
+.dsTitle {
+  font-size: 32px; /* حجم خط أكبر */
+  color: #2c3e50; /* لون رمادي داكن */
+  margin-bottom: 12px;
+}
+
+.dsAddress {
+  font-size: 16px; /* حجم خط أكبر */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #777; /* لون رمادي متوسط */
+}
+
+.dsDistance,
+.dsPriceHighlight {
+  font-size: 16px; /* حجم خط أكبر */
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.dsDistance {
+  color: #3498db; /* لون أزرق جذاب */
+}
+
+.dsPriceHighlight {
+  color: #27ae60; /* لون أخضر جذاب */
+}
+
+.dsImages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* تخطيط شبكي متجاوب */
+  gap: 16px; /* مسافة أكبر بين الصور */
+  margin-top: 16px;
+}
+
+.dsImgWrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف للصور */
+}
+
+.dsImg {
+  width: 100%;
+  height: 250px; /* ارتفاع أكبر للصور */
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* تأثيرات التحويل والتصفية */
+  filter: brightness(0.95); /* سطوع أقل قليلاً */
+}
+
+.dsImg:hover {
+  transform: scale(1.03); /* تكبير طفيف عند التhover */
+  filter: brightness(1); /* استعادة السطوع الكامل عند التhover */
+}
+
+/* ... باقي تنسيقات CSS ... */
+
+.dsDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 24px;
+  flex-direction: column; /* لجعل العناصر تترتب عمودياً في البداية */
+}
+
+.dsDetailsTexts {
+  flex: 1; /* سيأخذ المساحة المتبقية */
+}
+
+.dsDesc {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #434a54; /* لون رمادي أغمق */
+  margin-bottom: 20px;
+}
+
+.dsFacilities h3,
+.dsRoomTypes h3 {
+  font-size: 20px;
+  color: #3a7bd5; /* لون أزرق أعمق وأكثر جاذبية */
+  margin-top: 24px;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #d8dee9; /* خط سفلي أفتح */
+  padding-bottom: 8px;
+}
+
+.dsFacilities ul,
+.dsRoomTypes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dsFacilities li,
+.dsRoomTypes li {
+  font-size: 16px;
+  color: #5c6ac4; /* لون أرجواني مائل للأزرق */
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.dsFacilities li::before {
+  content: '✓';
+  color: #1abc9c; /* لون أخضر مزرق فاتح */
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.dsDetailsPrice {
+  width: 100%; /* سيأخذ كامل العرض على الشاشات الصغيرة */
+  max-width: 380px; /* زيادة العرض الأقصى قليلاً */
+  background-color: #f7f9fc; /* لون خلفية أبيض مائل للرمادي الفاتح */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(65, 105, 225, 0.15); /* ظل أزرق فاتح */
+  align-self: flex-start; /* سيبقى في البداية على الشاشات الكبيرة */
+  margin-top: 24px; /* لإبعاده عن النصوص */
+}
+
+@media (min-width: 769px) {
+  .dsDetails {
+    flex-direction: row; /* للعودة إلى الترتيب الأفقي على الشاشات الكبيرة */
+    align-items: flex-start; /* لمحاذاة العناصر من الأعلى */
+  }
+
+  .dsDetailsTexts {
+    flex: 2;
+  }
+
+  .dsDetailsPrice {
+    flex: 1;
+    align-self: flex-start; /* للتأكد من محاذاته من الأعلى */
+    margin-top: 0; /* إزالة الهامش العلوي على الشاشات الكبيرة */
+  }
+}
+
+.dsDetailsPrice > h1 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+}
+
+.dsDetailsPrice > span {
+  font-size: 15px;
+  color: #777;
+}
+
+.dsDetailsPrice > h2 {
+  font-size: 26px; /* حجم خط أكبر للسعر */
+  font-weight: 700;
+  color: #2ecc71; /* لون أخضر فاتح وبارز */
+  margin: 0;
+}
+
+.dsDetailsPrice > button {
+  border: none;
+  padding: 12px 24px;
+  background-color: #2ecc71; /* لون أخضر فاتح وبارز */
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  font-size: 16px;
+  box-shadow: 0 6px 16px rgba(46, 204, 113, 0.4); /* ظل أخضر فاتح */
+}
+
+.dsDetailsPrice > button:hover {
+  background-color: #27ae60; /* لون أخضر أغمق عند التhover */
+  transform: translateY(-2px);
+}
+
+/* ... باقي تنسيقات CSS ... */
+
+/* Slider */
+.slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85); /* خلفية أغمق للتركيز على الصورة */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliderWrapper {
+  width: 95%; /* زيادة عرض الحاوية */
+  height: 90vh; /* زيادة ارتفاع الحاوية */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sliderImg {
+  max-width: 95%;
+  max-height: 90%;
+  border-radius: 16px;
+  object-fit: contain; /* احتواء الصورة بالكامل */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* ظل للصورة المنزلقة */
+}
+
+.close,
+.arrow {
+  position: absolute;
+  color: white;
+  font-size: 42px; /* حجم أيقونات أكبر */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  opacity: 0.8;
+}
+.close {
+  top: 30px;
+  right: 40px;
+}
+.arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.arrow-left {
+  left: 40px;
+}
+.arrow-right {
+  right: 40px;
+}
+.close:hover,
+.arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+  opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .detailshotelWrapper {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .dsImgWrapper {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .dsDetails {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .dsDetailsPrice {
+    max-width: 100%;
+    align-self: stretch;
+    padding: 16px;
+  }
+
+  .sliderImg {
+    max-width: 98%;
+    max-height: 70vh;
+  }
+
+  .dsTitle {
+    font-size: 26px;
+  }
+
+  .dsDesc {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .dsBookNow {
+    font-size: 14px;
+    padding: 10px 20px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .close,
+  .arrow {
+    font-size: 32px;
+  }
+  .close {
+    top: 20px;
+    right: 20px;
+  }
+  .arrow-left {
+    left: 20px;
+  }
+  .arrow-right {
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detailshotelWrapper {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .dsImgWrapper {
+    flex: 1 1 100%;
+  }
+
+  .sliderImg {
+    max-height: 60vh;
+  }
+
+  .dsTitle {
+    font-size: 22px;
+  }
+
+  .dsDetailsPrice > h1 {
+    font-size: 16px;
+  }
+
+  .dsDetailsPrice > h2 {
+    font-size: 20px;
+  }
+
+  .close,
+  .arrow {
+    font-size: 28px;
+  }
+  .close {
+    top: 16px;
+    right: 16px;
+  }
+  .arrow-left {
+    left: 16px;
+  }
+  .arrow-right {
+    right: 16px;
+  }
+}

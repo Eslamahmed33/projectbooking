@@ -1,0 +1,369 @@
+.flight-container {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  option{
+    color: #0f2027;
+    background-color: #8aa2a7;
+  }
+  
+  .flight-search-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+  }
+  
+  .flight-search-box h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .flight-search-box p {
+    margin-bottom: 30px;
+    color: #ddd;
+  }
+  
+  .flight-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+  
+  .flight-input {
+    position: relative;
+    flex: 1 1 45%;
+  }
+  
+  .flight-input input,
+  .flight-input select {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .flight-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-size: 16px;
+  }
+  
+  .flight-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .flight-button:hover {
+    background: linear-gradient(to right, #0083b0, #00b4db);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 180, 219, 0.5);
+  }
+  
+
+  .flight-features {
+    margin-top: 60px;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+  }
+  
+  .flight-features h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .feature-card {
+    background-color: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,180,219,0.4);
+  }
+  
+  .feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #00d4ff;
+  }
+  
+  .feature-card p {
+    font-size: 14px;
+    color: #ddd;
+  }
+  /* ... باقي الـ CSS القديم ... */
+
+.flights-page {
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* تغيير الـ Gradient للصفحة كلها */
+    min-height: 100vh;
+    padding-bottom: 60px; /* عشان القسم الأخير ميتلزقش في آخر الشاشة */
+  }
+  
+  .flight-search-container {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flight-options-container {
+    padding: 40px 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .flight-options-container h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .flight-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .flight-option-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flight-option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 180, 219, 0.4);
+  }
+  
+  .flight-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .flight-details {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .flight-details h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #00d4ff;
+  }
+  
+  .flight-details p {
+    margin-bottom: 8px;
+    color: #ddd;
+    font-size: 14px;
+  }
+  
+  .flight-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 15px;
+  }
+  
+  .flight-features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .flight-feature-item {
+    background-color: rgba(0, 180, 219, 0.15);
+    color: #00d4ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  .flight-rating {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ffc107;
+    display: flex;
+    align-items: center;
+  }
+  
+  .star-icon {
+    margin-left: 5px;
+  }
+  
+  .book-flight-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: linear-gradient(to right, #28a745, #218838);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .book-flight-button:hover {
+    background: linear-gradient(to right, #218838, #28a745);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* ✨ قسم نصائح السفر ✨ */
+  .travel-tips-section {
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    margin: 40px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+  }
+  
+  .travel-tips-section h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .tip-card {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tip-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #00bfff;
+  }
+  
+  .tip-card p {
+    font-size: 14px;
+    color: #eee;
+    line-height: 1.6;
+  }
+  
+  /* ✨ قسم تواصل معنا ✨ */
+  .contact-us-section {
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(to right, #6441a5, #2a0845);
+    border-radius: 20px;
+    margin: 40px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .contact-us-section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-us-section p {
+    font-size: 16px;
+    color: #eee;
+    margin-bottom: 30px;
+  }
+  
+  .contact-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #008ae6;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 191, 255, 0.5);
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 600px) {
+    .flight-options-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .flight-option-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .flight-details {
+      text-align: center;
+    }
+  
+    .flight-image {
+      height: auto;
+      max-height: 200px;
+    }
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .flight-input {
+      flex: 1 1 100%;
+    }
+  }
+  

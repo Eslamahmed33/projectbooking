@@ -1,0 +1,81 @@
+.home {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  .homeContainer {
+    flex: 6;
+
+    .widgets,
+    .charts {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .charts {
+      padding: 5px 20px;
+    }
+
+    .listContainer {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px;
+      background: #fff;
+      border-radius: 16px;
+      color: #444;
+      transition: all 0.3s ease;
+
+      .listTitle {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 15px;
+        border-left: 4px solid #3b82f6;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  // 💡 ستايل الدارك مود العصري
+  &.dark {
+    background: #303031;
+
+    .homeContainer {
+      .listContainer {
+        background: #1e293b;
+        color: #f1f5f9;
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+
+        .listTitle {
+          color: #e0f2fe;
+          border-left: 4px solid #38bdf8;
+        }
+      }
+    }
+  }
+
+  // ✅ استجابة للشاشات الصغيرة
+  @media (max-width: 768px) {
+    .homeContainer {
+      .widgets,
+      .charts {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .listContainer {
+        margin: 10px;
+        padding: 15px;
+
+        .listTitle {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

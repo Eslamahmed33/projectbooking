@@ -1,0 +1,162 @@
+.listContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  
+  .listWrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .listWrapper {
+      flex-direction: row;
+    }
+  }
+  
+  .listSearch {
+    flex: 1;
+    background: linear-gradient(135deg, #ffffff, #e0f0ff);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow:
+      0 2px 5px rgba(0, 0, 0, 0.05),
+      0 8px 20px rgba(0, 0, 0, 0.15); /* 3D shadow effect */
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    transition: transform 0.3s ease;
+  }
+  .listSearch:hover {
+    transform: translateY(-2px);
+  }
+  .lsTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .lsItem {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .lsItem > label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .lsItem > input,
+  .datePickerInput {
+    height: 36px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  .lsItem > input:focus,
+  .datePickerInput:focus {
+    border-color: #007bff;
+  }
+  
+  .lsOptions {
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+  }
+  
+  .lsOptionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #555;
+  }
+  
+  .lsOptionInput {
+    width: 60px;
+    padding: 4px 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .listSearch > button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .listSearch > button:hover {
+    background-color: #0056b3;
+  }
+  
+  .listResult {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .react-datepicker {
+    animation: fadeInUp 0.3s ease forwards;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  /* Responsive tweaks */
+  @media (max-width: 767px) {
+    .listSearch {
+      position: relative;
+      top: 0;
+    }
+  
+    .lsTitle {
+      font-size: 20px;
+    }
+  
+    .lsItem > input,
+    .datePickerInput {
+      font-size: 13px;
+    }
+  
+    .listSearch > button {
+      font-size: 14px;
+    }
+  }
+  

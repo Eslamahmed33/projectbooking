@@ -1,0 +1,97 @@
+.mail {
+    width: 100%;
+    margin-top: 50px;
+    background: linear-gradient(135deg, #0071c2, #003580);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease;
+  }
+  
+  .mailtitle {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .maildesc {
+    font-size: 16px;
+    max-width: 500px;
+    line-height: 1.5;
+  }
+  
+  .mailinputcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .mailinputcontainer > input {
+    width: 300px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .mailinputcontainer > input:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+  }
+  
+  .mailinputcontainer > button {
+    padding: 12px 25px;
+    background-color: #00bfff;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .mailinputcontainer > button:hover {
+    background-color: #009fd9;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .mailtitle {
+      font-size: 24px;
+    }
+  
+    .maildesc {
+      font-size: 15px;
+    }
+  
+    .mailinputcontainer > input {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .mailinputcontainer > button {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

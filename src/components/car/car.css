@@ -1,0 +1,281 @@
+/* أنماط عامة للصفحة */
+.car-page {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* نفس تدرج الخلفية */
+    color: #fff; /* تغيير لون النص الأساسي للأبيض */
+  }
+  
+  /* حاوية البحث عن السيارات */
+  .car-search-container {
+    background-color: rgba(255, 255, 255, 0.1); /* نفس خلفية صندوق البحث */
+    border-radius: 20px; /* نفس شكل الحواف */
+    padding: 40px 20px; /* نفس المسافات الداخلية */
+    margin: 60px auto 20px auto; /* نفس المسافات العلوية والسفلية */
+    max-width: 600px; /* نفس الحد الأقصى للعرض */
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* نفس الظل */
+    backdrop-filter: blur(10px); /* نفس تأثير الضبابية */
+  }
+  
+  .car-search-box h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .car-search-box p {
+    margin-bottom: 30px;
+    color: #ddd;
+  }
+  
+  .car-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+  
+  .car-input {
+    position: relative;
+    flex: 1 1 45%;
+  }
+  
+  .car-input input,
+  .car-input select {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.15); /* نفس خلفية حقول الإدخال */
+    color: #fff; /* لون النص داخل الحقول */
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .car-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-size: 16px;
+  }
+  
+  .car-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    background: linear-gradient(to right, #00b4db, #0083b0); /* نفس تدرج زر البحث */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .car-button:hover {
+    background: linear-gradient(to right, #0083b0, #00b4db);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 180, 219, 0.5);
+  }
+  
+  /* حاوية خيارات السيارات */
+  .car-options-container {
+    padding: 40px 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .car-options-container h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .car-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .car-option-card {
+    background-color: rgba(255, 255, 255, 0.1); /* نفس خلفية بطاقات الخيارات */
+    border-radius: 15px; /* نفس شكل الحواف */
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* نفس الظل */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .car-option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 180, 219, 0.4); /* نفس ظل التhover */
+  }
+  
+  .car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .car-details {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .car-details h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #00d4ff; /* نفس لون عنوان التفاصيل */
+  }
+  
+  .car-details p {
+    margin-bottom: 8px;
+    color: #ddd;
+    font-size: 14px;
+  }
+  
+  .car-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 15px;
+  }
+  
+  .car-features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .car-feature-item {
+    background-color: rgba(0, 180, 219, 0.15); /* نفس خلفية عناصر المميزات */
+    color: #00d4ff; /* نفس لون نص عناصر المميزات */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  .book-car-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: linear-gradient(to right, #28a745, #218838); /* نفس تدرج زر الحجز */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .book-car-button:hover {
+    background: linear-gradient(to right, #218838, #28a745);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* ✨ قسم نصائح تأجير السيارات ✨ */
+  .car-tips-section {
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08); /* نفس خلفية قسم النصائح */
+    border-radius: 20px;
+    margin: 40px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* نفس الظل */
+    backdrop-filter: blur(5px); /* نفس تأثير الضبابية */
+  }
+  
+  .car-tips-section h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .tip-card {
+    background-color: rgba(0, 0, 0, 0.15); /* نفس خلفية بطاقات النصائح */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tip-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #00bfff; /* نفس لون عنوان النصيحة */
+  }
+  
+  .tip-card p {
+    font-size: 14px;
+    color: #eee;
+    line-height: 1.6;
+  }
+  
+  /* ✨ قسم تواصل معنا ✨ */
+  .contact-us-section {
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(to right, #6441a5, #2a0845); /* نفس تدرج خلفية التواصل */
+    border-radius: 20px;
+    margin: 40px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* نفس الظل */
+  }
+  
+  .contact-us-section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-us-section p {
+    font-size: 16px;
+    color: #eee;
+    margin-bottom: 30px;
+  }
+  
+  .contact-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #00bfff; /* نفس لون زر التواصل */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #008ae6;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 191, 255, 0.5);
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .car-form {
+      flex-direction: column;
+    }
+  
+    .car-input {
+      width: 100%;
+    }
+  
+    .car-options-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }

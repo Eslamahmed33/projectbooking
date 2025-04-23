@@ -1,0 +1,26 @@
+.homeContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(to bottom, #e6eef1, #fff); /* تدرج سماوي فاتح للأبيض */
+  padding: 20px; /* إضافة بعض الحشو لتحسين المظهر */
+  border-radius: 8px; /* حواف مستديرة اختيارية */
+}
+
+.hometitle {
+  width: 100%;
+  max-width: 1024px;
+  font-size: 28px; /* تكبير حجم الخط */
+  text-align: center;
+  /* تدرج لوني للنص */
+  background: linear-gradient(to right, #c471ed, #12c2e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* ظل صندوقي */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* ظل صندوقي خفيف للخلفية */
+  padding: 15px; /* إضافة بعض الحشو حول العنوان */
+  border-radius: 8px; /* حواف مستديرة اختيارية للخلفية */
+}

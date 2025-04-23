@@ -1,0 +1,74 @@
+.table {
+  // التنسيقات العامة للـ table
+  .tableCell {
+    color: gray;
+    font-weight: 600;
+  }
+
+  .cellWrapper {
+    display: flex;
+    align-items: center;
+
+    .image {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+  }
+
+  .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &.Approved {
+      color: green;
+      background-color: rgba(0, 128, 0, 0.15);
+    }
+
+    &.Pending {
+      color: goldenrod;
+      background-color: rgba(189, 189, 32, 0.11);
+    }
+  }
+
+  // ستايلات الدارك مود للـ Tabledashboard
+  &.dark {
+    .tableCell {
+      color: #eee;
+    }
+    
+
+    .status {
+      &.Approved {
+        color: lightgreen;
+        background-color: rgba(144, 238, 144, 0.15);
+      }
+
+      &.Pending {
+        color: gold;
+        background-color: rgba(255, 215, 0, 0.15);
+      }
+    }
+  }
+
+  // إضافة تأثير بوكس شادو مع الأنماط المتجاوبة
+  @media (max-width: 768px) {
+    .tableCell {
+      font-size: 12px;
+    }
+
+    .status {
+      font-size: 12px;
+      padding: 3px 8px;
+    }
+  }
+
+  .MuiPaper-root {
+    border-radius: 10px; // إضافة حواف دائرية للورقة
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}

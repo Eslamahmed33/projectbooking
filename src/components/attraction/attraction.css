@@ -1,0 +1,148 @@
+.attraction-container {
+    padding: 2rem;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* نفس تدرج الخلفية */
+    font-family: 'Cairo', sans-serif;
+    color: white; /* لون النص الأساسي */
+    min-height: auto; /* ممكن تعديلها حسب الحاجة */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .attraction-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* ظل مشابه */
+    backdrop-filter: blur(5px); /* تأثير البلور */
+    width: 90%;
+    max-width: 800px; /* زيادة الحد الأقصى لعرض الهيدر */
+  }
+  
+  .attraction-header h2 {
+    font-size: 2.5rem; /* تكبير حجم العنوان */
+    margin-bottom: 0.75rem;
+  }
+  
+  .attraction-header p {
+    font-size: 1.1rem; /* تكبير حجم الوصف */
+    opacity: 0.9;
+  }
+  
+  .attraction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* تعديل بسيط في أقل عرض */
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px; /* تحديد حد أقصى لعرض الشبكة */
+    margin-bottom: 2rem; /* إضافة مساحة سفلية للشبكة */
+  }
+  
+  .attraction-card {
+    background-color: rgba(255, 255, 255, 0.15); /* خلفية شفافة أكثر للبطاقات */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل مشابه */
+    overflow: hidden;
+    transition: transform 0.3s;
+    backdrop-filter: blur(5px); /* تأثير البلور */
+  }
+  
+  .attraction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* ظل أكبر عند التhover */
+  }
+  
+  .attraction-image {
+    width: 100%;
+    height: 250px; /* زيادة ارتفاع الصورة */
+    object-fit: cover;
+  }
+  
+  .attraction-content {
+    padding: 1.5rem; /* زيادة المسافة الداخلية للمحتوى */
+    text-align: center;
+  }
+  
+  .attraction-content h3 {
+    font-size: 1.5rem; /* تكبير حجم عنوان المعلم */
+    margin-bottom: 0.5rem;
+  }
+  
+  .attraction-city {
+    font-size: 1rem;
+    color: #eee; /* لون نص أفتح للمدينة */
+    margin-bottom: 0.75rem;
+  }
+  
+  .attraction-description {
+    font-size: 0.95rem;
+    color: #ddd; /* لون نص أفتح للوصف */
+    margin-bottom: 1rem;
+    line-height: 1.6; /* تحسين قابلية القراءة للوصف */
+  }
+  
+  .explore-btn {
+    background-color: #0072ff; /* نفس لون زر الحجز */
+    color: white;
+    padding: 0.75rem 1.75rem; /* تعديل حجم الزر */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.1rem; /* تكبير حجم خط الزر */
+  }
+  
+  .explore-btn:hover {
+    background-color: #005ec4; /* درجة أغمق عند التhover */
+  }
+
+
+  /* ... باقي تنسيقاتك السابقة ... */
+
+/* ✨ قسم نصائح للزوار ✨ */
+.travel-tips-section {
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.08); /* خلفية شفافة */
+    border-radius: 16px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل مشابه */
+    backdrop-filter: blur(5px); /* تأثير البلور */
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .travel-tips-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .tip-card {
+    background-color: rgba(0, 0, 0, 0.15); /* خلفية شفافة أغمق للبطاقات */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .tip-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: #00bfff; /* لون مميز للعناوين */
+  }
+  
+  .tip-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.8;
+  }

@@ -1,0 +1,123 @@
+.widget {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.1); /* الظل الفاتح */
+  box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  height: 100px;
+  background-color: #fff;
+  color: #555; /* اللون الافتراضي للنص */
+  transition: all 0.3s ease-in-out;
+
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .title {
+      font-weight: bold;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .counter {
+      font-size: 30px;
+      font-weight: 600;
+      color: #000;
+      margin: 5px 0;
+    }
+
+    .link {
+      width: max-content;
+      font-size: 12px;
+      color: #3498db;
+      cursor: pointer;
+      text-decoration: none; /* إزالة التسطير */
+    }
+
+    .percentage {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
+
+      &.positive {
+        color: #2ecc71; /* أخضر فاتح */
+      }
+      &.negative {
+        color: #e74c3c; /* أحمر داكن */
+      }
+    }
+
+    .icon {
+      font-size: 24px;
+      padding: 8px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.1);
+      color: #fff;
+      align-self: flex-end;
+    }
+  }
+
+  // ستايلات الدارك مود للـ Widgetdashboard
+  &.dark {
+    background-color: #333;
+    color: #eee;
+    box-shadow: 2px 4px 12px 1px rgba(0, 0, 0, 0.6); /* الظل الداكن */
+    
+    .title {
+      color: #ddd;
+    }
+
+    .counter {
+      color: #fff;
+    }
+
+    .link {
+      color: #6c5ce7;
+    }
+
+    .percentage {
+      &.positive {
+        color: #9bff99; /* أخضر فاتح */
+      }
+      &.negative {
+        color: #ff7f7f; /* أحمر فاتح */
+      }
+    }
+
+    .icon {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  // تحسين التنسيق للهواتف والشاشات الصغيرة
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+
+    .left,
+    .right {
+      align-items: center;
+      .title {
+        text-align: center;
+        font-size: 14px;
+      }
+      .counter {
+        font-size: 24px;
+      }
+      .percentage {
+        font-size: 12px;
+      }
+    }
+  }
+
+  // تحسين التنسيق لأحجام الشاشات الكبيرة
+  @media (min-width: 1200px) {
+    height: 120px;
+    padding: 20px;
+  }
+}

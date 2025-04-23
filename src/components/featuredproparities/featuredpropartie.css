@@ -1,0 +1,145 @@
+.fp {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: auto;
+    padding: 0 10px;
+  }
+  
+  /* ... باقي تنسيقات CSS ... */
+/* ... باقي تنسيقات CSS ... */
+/* ... باقي تنسيقات CSS ... */
+
+.fpitem {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 6px 15px rgba(0, 0, 0, 0.12);
+  transform: perspective(1000px) translateZ(0);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.fpitem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #ff8c00;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fpitem:hover {
+  transform: perspective(1000px) translateZ(10px) translateY(-8px) scale(1.03); /* ارتفاع للأعلى وتكبير طفيف */
+  box-shadow:
+    0 16px 32px rgba(0, 0, 0, 0.18),
+    0 24px 48px rgba(0, 0, 0, 0.24);
+}
+
+.fpitem:hover::before {
+  transform: scaleX(1);
+}
+
+.fpimg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fpitem:hover .fpimg {
+  transform: scale(1.08);
+}
+
+/* ... باقي تنسيقات CSS ... */
+
+/* ... باقي تنسيقات CSS ... */
+
+/* ... باقي تنسيقات CSS ... */
+  
+  
+  .fpname {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  
+  .fpcity,
+  .fpprice {
+    padding: 0 10px;
+    color: #444;
+  }
+  
+  .fprating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px 10px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+  
+  .fprating button {
+    background-color: #003580;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .fpstars {
+    color: gold;
+    font-size: 16px;
+    margin-top: 4px;
+    display: block;
+  }
+  
+  /* نصوص تلتف لو طويلة */
+  .fpitem span {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .fp {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .fpitem {
+      max-width: 90%;
+    }
+  
+    .fpname,
+    .fpcity,
+    .fpprice,
+    .fprating span {
+      font-size: 13px;
+      text-align: center;
+    }
+  
+    .fprating {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
