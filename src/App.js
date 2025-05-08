@@ -17,7 +17,8 @@ import { hotelInputs, facilityInputs } from './formSource';
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
-import "./app.css";
+import "./App.css";
+
 import { DarkModeContextProvider } from "./context/darkModeContext"; // استورد الـ Provider
 import Hoteldetails from "./components/hoteldetails/Hoteldetails";
 import Detailshotel from "./components/detailshotel/Detailshotel";
