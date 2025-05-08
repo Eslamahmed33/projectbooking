@@ -77,6 +77,11 @@ const properties = [{
   img: 'https://w-barcelona-hotel.albooked.com/data/Photos/OriginalPhoto/16344/1634403/1634403690/W-Barcelona-Hotel-Exterior.JPEG',
   title: 'City Life Hotel',
   subtitle: '100 Hotels'
+},
+{
+  img: 'https://sur-grand-hotel.albooked.com/data/Photos/OriginalPhoto/15903/1590394/1590394143/Sur-Grand-Hotel-Exterior.JPEG',
+  title: 'Sur Grand Hotel',
+  subtitle: '1200 Hotels'
 }];
 
 const Property = () => {

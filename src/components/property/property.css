@@ -90,11 +90,29 @@
 }
 
 @media (max-width: 480px) {
+  .plist-slide {
+    flex-wrap: wrap; /* السماح للعناصر بالالتفاف إلى صف جديد */
+    justify-content: flex-start; /* محاذاة العناصر من البداية لملء الصف */
+    gap: 8px; /* تقليل المسافة بين العناصر */
+  }
+
   .plistitem {
-    flex: 0 0 100%;
+    flex: 0 0 calc(50% - 4px); /* اجعل عرض العنصر نصف العرض مع خصم بسيط للمسافة */
   }
 
   .slider-btn {
-    display: none;
+    display: none; /* إخفاء أزرار التنقل في الشاشات الصغيرة جدًا */
+  }
+
+  .plisttitle h1 {
+    font-size: 14px; /* تصغير حجم العنوان */
+  }
+
+  .plisttitle h2 {
+    font-size: 12px; /* تصغير حجم العنوان الثانوي */
+  }
+
+  .slider-container {
+    padding: 0 10px; /* تقليل الحشو الجانبي للحاوية */
   }
 }
